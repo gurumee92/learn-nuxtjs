@@ -45,6 +45,26 @@ export default {
           name: 'description',
           content: `이 상품은 ${this.product.name}입니다.`,
         },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `nuxt shopping - ${this.product.name}`,
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `이름: ${this.product.name}, 가격: ${this.product.price}`,
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: this.product.imageUrl,
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: this.product.imageUrl,
+        },
       ],
     }
   },
