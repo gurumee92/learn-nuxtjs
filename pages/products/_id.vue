@@ -36,16 +36,18 @@ export default {
     }
   },
 
-  hear: {
-    title: `Shopping Item Detail`,
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: `이 상품은 ~~~입니다.`,
-      }
-    ],
-  }
+  head() {
+    return {
+      title: `Shopping Item Detail - ${this.product.name}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `이 상품은 ${this.product.name}입니다.`,
+        },
+      ],
+    }
+  },
 }
 </script>
 
