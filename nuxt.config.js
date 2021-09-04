@@ -50,7 +50,7 @@ export default {
   },
 
   env: {
-    baseUrl: process.env.NODE_ENV === 'production' ?
+    baseURL: process.env.NODE_ENV === 'production' ?
       'https://my-json-server.typicode.com/gurumee92/learn-nuxtjs-be' :
       'http://localhost:3000',
   }
