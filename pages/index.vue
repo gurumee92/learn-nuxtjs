@@ -24,7 +24,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import SearchInput from '@/components/SearchInput';
 import {fetchProductsByKeyword} from "@/api";
 
@@ -34,7 +33,7 @@ export default  {
   },
 
   async asyncData() {
-    const response = await axios.get("http://localhost:3000/products");
+    const response = await fetchProductsByKeyword("");
     const products = response.data.map(item => {
       return {
         ...item,
